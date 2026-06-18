@@ -20,3 +20,28 @@ type CourierPerformance struct {
 	Terlambat       int     `json:"terlambat"`
 	Score           float64 `json:"score"`
 }
+
+// Struktur data dari order-service
+type OrderItem struct {
+	OrderID   int    `json:"order_id"`
+	CreatedAt string `json:"created_at"`
+}
+
+// Struktur data dari tracking-service
+type TrackingItem struct {
+	ID     int    `json:"id"`
+	Resi   string `json:"resi"`
+	Status string `json:"status"`
+}
+
+// Output untuk laporan status
+type StatusReport struct {
+	Status string `json:"status"`
+	Total  int    `json:"total"`
+}
+
+// Output untuk laporan bulanan
+type MonthlyReport struct {
+	Month string `json:"month"`
+	Total int    `json:"total"`
+}

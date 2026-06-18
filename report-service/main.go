@@ -59,6 +59,8 @@ func main() {
 	http.HandleFunc("/report/daily", h.DailyReport)
 	http.HandleFunc("/report/problems", h.ProblemsReport)
 	http.HandleFunc("/report/courier-performance", h.CourierPerformance)
+	http.HandleFunc("/report/status", h.StatusReportHandler)
+	http.HandleFunc("/report/monthly", h.MonthlyReportHandler)
 
 	log.Println("Running on :8083")
 	log.Fatal(http.ListenAndServe(":8083", nil))
